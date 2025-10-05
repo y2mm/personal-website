@@ -1,0 +1,23 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev
+    volumes:
+      - ./:/app:delegated
+      - node_modules:/app/node_modules
+      - npm_cache:/home/node/.npm
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_TELEMETRY_DISABLED=1
+      - WATCHPACK_POLLING=true
+      - CHOKIDAR_USEPOLLING=true
+      - CHOKIDAR_INTERVAL=300
+    # If you keep dev secrets in .env.local, uncomment:
+    # env_file:
+    #   - .env.local
+
+volumes:
+  node_modules:
+  npm_cache:
