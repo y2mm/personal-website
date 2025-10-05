@@ -29,7 +29,7 @@ export default function HomePage() {
         <div className="hero-content">
           <div className="hero-text">
             <h1>
-              Hi, I'm Youssef Mashaly.
+              Hi, I&apos;m Youssef Mashaly.
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-muted">
               CS @ Georgia Tech · Cybersecurity & Info/Networks · Expected Dec 2026 · GPA: 3.8
@@ -54,8 +54,8 @@ export default function HomePage() {
         <div className="mt-6 max-w-4xl">
           <div className="about-content">
             <p className="text-lg mb-4">
-              I'm a Computer Science student at Georgia Tech specializing in Cybersecurity and Information Networks, 
-              maintaining a 3.8 GPA and expected to graduate in December 2026. I'm passionate about full-stack development, 
+              I&apos;m a Computer Science student at Georgia Tech specializing in Cybersecurity and Information Networks, 
+              maintaining a 3.8 GPA and expected to graduate in December 2026. I&apos;m passionate about full-stack development, 
               AI research, and building scalable solutions that make a real impact.
             </p>
             <p className="text-muted mb-4">
@@ -64,8 +64,8 @@ export default function HomePage() {
               using modern technologies and best practices.
             </p>
             <p className="text-muted mb-6">
-              When I'm not coding, you'll find me involved in GreyHat Cybersecurity Club, contributing to Wreck Racing, 
-              or participating in the Arab Student Organization. I'm always excited to collaborate on innovative projects 
+              When I&apos;m not coding, you&apos;ll find me involved in GreyHat Cybersecurity Club, contributing to Wreck Racing, 
+              or participating in the Arab Student Organization. I&apos;m always excited to collaborate on innovative projects 
               and discuss the latest in tech and cybersecurity.
             </p>
             
@@ -165,7 +165,7 @@ export default function HomePage() {
         <h2 className="font-semibold">Contact</h2>
         <div className="mt-6 space-y-4">
           <p className="text-muted">
-            Let's connect! I'm always interested in discussing new opportunities, 
+            Let&apos;s connect! I&apos;m always interested in discussing new opportunities, 
             collaborating on projects, or chatting about technology and cybersecurity.
           </p>
           <div className="flex flex-wrap gap-4">

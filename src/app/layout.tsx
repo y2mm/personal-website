@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import Link from "next/link";
 import ThemeToggle from '../components/ThemeToggle';
 
 export const metadata: Metadata = {
@@ -25,13 +26,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header>
           <nav className="container">
-            <a href="/" className="nav-brand-logo">
+            <Link href="/" className="nav-brand-logo">
               <img 
                 src="/logos/logo.jpeg" 
                 alt="Youssef Mashaly" 
                 className="logo"
               />
-            </a>
+            </Link>
             <div className="nav-controls">
               <div className="nav-links">
                 <a href="#about" className="nav-btn">About</a>
