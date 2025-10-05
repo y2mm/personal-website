@@ -21,15 +21,15 @@ export default function ThemeToggle() {
 
   return (
     <div className="theme-switch-container">
-      <span className="theme-label">🌙</span>
       <button 
         className={`theme-switch ${theme === 'light' ? 'active' : ''}`}
         onClick={toggleTheme}
         aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
       >
-        <span className="theme-switch-slider"></span>
+        <span className="theme-switch-slider">
+          {theme === 'dark' ? '🌙' : '☀️'}
+        </span>
       </button>
-      <span className="theme-label">☀️</span>
     </div>
   );
 }
