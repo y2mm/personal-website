@@ -40,7 +40,7 @@ export default function HomePage() {
           </div>
           <div className="hero-image">
             <img 
-              src="/img/profile.jpg" 
+              src="/img/profile.JPG" 
               alt="Youssef Mashaly - Software Engineer at Georgia Tech" 
               className="profile-photo"
             />
