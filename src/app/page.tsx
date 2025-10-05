@@ -37,7 +37,18 @@ export default function HomePage() {
               </p>
             </div>
             <div className="hero-button">
-              <a className="btn btn-secondary" href="/documents/Youssef_Mashaly.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a className="btn btn-secondary" href="https://github.com/y2mm" target="_blank" rel="noopener noreferrer">
+                <img src="/icons/github.png" alt="GitHub" className="btn-icon" />
+                GitHub
+              </a>
+              <a className="btn btn-secondary" href="https://linkedin.com/in/youssef-mashaly" target="_blank" rel="noopener noreferrer">
+                <img src="/icons/linkedin.png" alt="LinkedIn" className="btn-icon" />
+                LinkedIn
+              </a>
+              <a className="btn btn-secondary" href="/documents/Youssef_Mashaly.pdf" target="_blank" rel="noopener noreferrer">
+                <img src="/icons/resume.svg" alt="Resume" className="btn-icon" />
+                Resume
+              </a>
             </div>
           </div>
           <div className="hero-image">
@@ -183,7 +194,8 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              💼 LinkedIn
+              <img src="/icons/linkedin.png" alt="LinkedIn" className="btn-icon" />
+              LinkedIn
             </a>
             <a 
               href="https://github.com/y2mm" 
@@ -191,7 +203,8 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="btn btn-secondary"
             >
-              💻 GitHub
+              <img src="/icons/github.png" alt="GitHub" className="btn-icon" />
+              GitHub
             </a>
           </div>
         </div>
