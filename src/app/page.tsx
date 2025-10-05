@@ -27,14 +27,16 @@ export default function HomePage() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-content">
-          <div className="hero-text">
-            <h1>
-              Hi, I&apos;m Youssef Mashaly.
-            </h1>
-            <p className="mt-4 max-w-2xl text-lg text-muted">
-              CS @ Georgia Tech · Cybersecurity & Info/Networks · Expected Dec 2026 · GPA: 3.8
-            </p>
-            <div className="mt-6 flex gap-4">
+          <div className="hero-text-section">
+            <div className="hero-text">
+              <h1>
+                Hi, I&apos;m Youssef Mashaly.
+              </h1>
+              <p className="mt-4 max-w-2xl text-lg text-muted">
+                CS @ Georgia Tech · Cybersecurity & Info/Networks · Expected Dec 2026 · GPA: 3.8
+              </p>
+            </div>
+            <div className="hero-button">
               <a className="btn btn-secondary" href="/documents/Youssef_Mashaly.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </div>
