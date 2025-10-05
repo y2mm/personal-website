@@ -39,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="#projects" className="nav-btn">Projects</a>
                 <a href="#contact" className="nav-btn">Contact</a>
               </div>
+              <div className="nav-separator"></div>
               <ThemeToggle />
             </div>
           </nav>
