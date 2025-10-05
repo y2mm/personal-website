@@ -493,6 +493,10 @@ ul {
     gap: 1.5rem;
   }
   
+  .hero .flex {
+    justify-content: center;
+  }
+  
   .profile-photo {
     width: 200px;
     height: 200px;
