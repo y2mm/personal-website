@@ -127,12 +127,14 @@ export default function HomePage() {
         <div className="mt-6 max-w-4xl">
           <div className="about-content">
             <p className="text-lg mb-4">
-              I&apos;m Youssef, a Computer Science student at Georgia Tech. Outside of school and work,
-              I enjoy working on cars, staying active, and spending time outdoors.
+              I&apos;m a Computer Science student at Georgia Tech, graduating in December 2026 with concentrations
+              in Information/Internetworks and Cybersecurity. My experience spans agentic AI at IBM,
+              full-stack development at Mylo, and AI driving research at the ACT Driving Sim Lab.
             </p>
             <p className="text-muted mb-4">
-              In my free time, you&apos;ll often find me playing soccer or pickleball. I also love heading out
-              for a hike or spending a day at the beach — both are great ways to unwind and get outside.
+              Outside of school and work, I enjoy working on cars and playing soccer or pickleball.
+              I also love heading out for a hike or spending a day at the beach — both are great ways
+              to unwind and get outside.
             </p>
             <p className="text-muted mb-6">
               On campus, I&apos;m involved in Wreck Racing and the Arab Student Organization.
