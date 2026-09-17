@@ -133,8 +133,7 @@ export default function HomePage() {
             </p>
             <p className="text-muted mb-4">
               Outside of school and work, I enjoy working on cars and playing soccer or pickleball.
-              I also love heading out for a hike or spending a day at the beach — both are great ways
-              to unwind and get outside.
+              I also love heading out for a hike or spending a day at the beach. 🚗⚽️🏖️
             </p>
             <p className="text-muted mb-6">
               On campus, I&apos;m involved in Wreck Racing and the Arab Student Organization.
