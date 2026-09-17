@@ -4,16 +4,16 @@ import Link from "next/link";
 import ThemeToggle from '../components/ThemeToggle';
 
 export const metadata: Metadata = {
-  title: "Youssef Mashaly — Portfolio",
-  description: "Software engineer & student. Building clean, reliable products.",
-  metadataBase: new URL("http://localhost:3000"),
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
+  title: "Youssef Mashaly — Software Engineering & Agentic AI",
+  description: "Georgia Tech Computer Science student graduating December 2026. Experience in agentic AI at IBM, full-stack development at Mylo, and AI driving research.",
+  metadataBase: new URL("https://www.youssefmashaly.me"),
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Youssef Mashaly — Portfolio",
-    description: "Software engineer & student. Building clean, reliable products.",
-    url: "http://localhost:3000",
+    title: "Youssef Mashaly — Software Engineering & Agentic AI",
+    description: "Georgia Tech CS student with experience in agentic AI at IBM, full-stack development at Mylo, and AI driving research.",
+    url: "https://www.youssefmashaly.me",
     siteName: "Youssef Mashaly",
-    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    images: [{ url: "/img/profile.JPG", alt: "Youssef Mashaly" }],
     locale: "en_US",
     type: "website",
   },

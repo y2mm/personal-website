@@ -1,23 +1,83 @@
-type Project = { title: string; blurb: string; href: string; tags: string[] };
+type Project = { title: string; blurb: string; details: string; tags: string[] };
 
 const projects: Project[] = [
   { 
     title: "LaTeX AI Autocomplete", 
     blurb: "AI-powered Chrome extension for Overleaf that boosted LaTeX editing speed by 70% with context-aware suggestions.",
-    href: "https://github.com/y2mm", 
-    tags: ["JavaScript", "HTML/CSS", "AI Models", "Chrome Extension"] 
+    details: "Integrated asynchronous REST API pipelines for multiple AI models and built an interface that tracks the cursor to render inline suggestions.",
+    tags: ["JavaScript", "HTML/CSS", "REST APIs", "Chrome Extension"]
   },
   { 
     title: "Spotify Wrapped", 
-    blurb: "Full-stack web app with 10+ interactive pages of personalized music statistics, scalable to 500+ users.",
-    href: "https://github.com/y2mm", 
-    tags: ["Python", "Django", "JavaScript", "Heroku"] 
+    blurb: "Led a team of 5 to build a full-stack web app with 10+ interactive pages of personalized music statistics.",
+    details: "Implemented authentication, CSRF protection, internationalization, dark mode, and a responsive UI. Improved runtime efficiency by 50% by refactoring backend queries and removing unused logic.",
+    tags: ["Python", "Django", "JavaScript", "HTML/CSS", "JUnit", "Agile Scrum"]
   },
-  { 
-    title: "Atlanta Food Finder", 
-    blurb: "Comprehensive food-finder web app with 300+ restaurants, Google Maps integration, and advanced filtering.",
-    href: "https://github.com/y2mm", 
-    tags: ["Python", "Django", "Google Maps API", "Figma"] 
+];
+
+const skillCategories = [
+  {
+    title: "Languages",
+    skills: ["Java", "Python", "TypeScript", "JavaScript", "SQL", "C", "Bash", "R", "HTML/CSS", "Assembly"],
+  },
+  {
+    title: "AI & Systems",
+    skills: ["Agentic AI", "LLM Orchestration", "MCP", "Prompt Engineering", "System Design", "Async Programming", "PyTorch", "IBM watsonx Orchestrate", "Langfuse", "AgentOps"],
+  },
+  {
+    title: "Frameworks & Cloud",
+    skills: ["React.js", "Next.js", "NestJS", "Django", "Docker", "AWS"],
+  },
+  {
+    title: "Databases & APIs",
+    skills: ["PostgreSQL", "MySQL", "REST APIs", "GraphQL", "Hasura", "Swagger/OpenAPI", "OAuth"],
+  },
+  {
+    title: "Development",
+    skills: ["Application Development", "Backend Development", "API Development", "Web Development", "Data Processing", "Cloud Computing", "Low-Latency Optimization"],
+  },
+  {
+    title: "Engineering Practices",
+    skills: ["Git/GitHub", "JUnit", "Unit Testing", "CI/CD", "Test-Driven Development", "Object-Oriented Programming"],
+  },
+];
+
+const experience = [
+  {
+    company: "IBM",
+    role: "Software Engineering Intern (Agentic AI)",
+    dates: "May 2026 – Aug 2026",
+    context: "New York, NY · Python · MCP · Agentic AI",
+    highlights: [
+      "Architected and built an agentic AI analytics platform, from 9+ stakeholder discovery interviews through system design and implementation, enabling natural-language analysis of engineering evaluation data.",
+      "Engineered 8 modular MCP tools with flexible argument handling, selective data retrieval, and caching to eliminate redundant pulls and reduce context-window usage and data-transfer overhead.",
+      "Developed asynchronous Python data retrieval pipelines that reduced enterprise data-retrieval latency by 91.7%.",
+      "Built release-aware data normalization workflows for cross-release analytics across evaluation datasets.",
+      "Created planner routing and 5 AI skills to orchestrate regression, trend, delta, audit, and failure analysis.",
+    ],
+  },
+  {
+    company: "Mylo",
+    role: "Software Engineering Intern",
+    dates: "June 2025 – Aug 2025",
+    context: "Cairo, Egypt · Next.js · NestJS · Amazon S3 · PostgreSQL",
+    highlights: [
+      "Reduced customer credit approval time by 90% by automating consumer onboarding for Mylo’s digital consumer finance platform with Next.js and Amazon S3.",
+      "Engineered an audit-logging system with NestJS, PostgreSQL, and GraphQL, capturing 1,000+ daily actions.",
+      "Implemented secure role-based access control (RBAC) using TypeORM and REST APIs.",
+      "Built reusable React components with configurable layouts, reducing code duplication and enhancing scalability.",
+    ],
+  },
+  {
+    company: "ACT Driving Sim Lab",
+    role: "Undergraduate Research Assistant",
+    dates: "Jan 2025 – Dec 2025",
+    context: "Atlanta, GA · PyTorch · CARLA · Behavior Cloning · Deep Reinforcement Learning",
+    highlights: [
+      "Extended hybrid AI driving models using Behavior Cloning and Deep Reinforcement Learning to analyze autonomous vs. human driving behavior and improve lane-change decision-making and vehicle safety.",
+      "Optimized PyTorch neural-network hyperparameters, increasing lane-change prediction accuracy by 37%.",
+      "Integrated and validated models in CARLA through visual and numerical testing across driving scenarios.",
+    ],
   },
 ];
 
@@ -33,7 +93,7 @@ export default function HomePage() {
                 Hi, I&apos;m Youssef Mashaly.
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-muted">
-                CS @ Georgia Tech · Cybersecurity & Info/Networks · Expected Dec 2026 · GPA: 3.8
+                CS @ Georgia Tech · Agentic AI · Full-stack Development
               </p>
             </div>
             <div className="hero-button">
@@ -54,7 +114,7 @@ export default function HomePage() {
           <div className="hero-image">
             <img 
               src="/img/profile.JPG" 
-              alt="Youssef Mashaly - Software Engineer at Georgia Tech" 
+              alt="Youssef Mashaly"
               className="profile-photo"
             />
           </div>
@@ -67,58 +127,28 @@ export default function HomePage() {
         <div className="mt-6 max-w-4xl">
           <div className="about-content">
             <p className="text-lg mb-4">
-              I&apos;m a Computer Science student at Georgia Tech specializing in Cybersecurity and Information Networks, 
-              maintaining a 3.8 GPA and expected to graduate in December 2026. I&apos;m passionate about full-stack development, 
-              AI research, and building scalable solutions that make a real impact.
+              I&apos;m Youssef, a Computer Science student at Georgia Tech. Outside of school and work,
+              I enjoy working on cars, staying active, and spending time outdoors.
             </p>
             <p className="text-muted mb-4">
-              My experience spans from reducing customer approval times by 90% at Mylo fintech to advancing autonomous 
-              vehicle safety research at Georgia Tech. I excel at turning complex problems into elegant, efficient solutions 
-              using modern technologies and best practices.
+              In my free time, you&apos;ll often find me playing soccer or pickleball. I also love heading out
+              for a hike or spending a day at the beach — both are great ways to unwind and get outside.
             </p>
             <p className="text-muted mb-6">
-              When I&apos;m not coding, you&apos;ll find me involved in GreyHat Cybersecurity Club, contributing to Wreck Racing, 
-              or participating in the Arab Student Organization. I&apos;m always excited to collaborate on innovative projects 
-              and discuss the latest in tech and cybersecurity.
+              On campus, I&apos;m involved in Wreck Racing and the Arab Student Organization.
             </p>
             
             <div className="skills-section">
               <h3 className="font-medium mb-3">Technologies & Skills:</h3>
               <div className="skills-grid">
-                <div className="skill-category">
-                  <h4 className="text-sm font-medium mb-2">Languages</h4>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="tag">Java</span>
-                    <span className="tag">Python</span>
-                    <span className="tag">TypeScript</span>
-                    <span className="tag">JavaScript</span>
-                    <span className="tag">SQL</span>
-                    <span className="tag">C</span>
-                    <span className="tag">R</span>
+                {skillCategories.map((category) => (
+                  <div key={category.title} className="skill-category">
+                    <h4 className="text-sm font-medium mb-2">{category.title}</h4>
+                    <div className="flex flex-wrap gap-1">
+                      {category.skills.map((skill) => <span key={skill} className="tag">{skill}</span>)}
+                    </div>
                   </div>
-                </div>
-                <div className="skill-category">
-                  <h4 className="text-sm font-medium mb-2">Frameworks & Tools</h4>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="tag">React.js</span>
-                    <span className="tag">Next.js</span>
-                    <span className="tag">NestJS</span>
-                    <span className="tag">Django</span>
-                    <span className="tag">AWS</span>
-                    <span className="tag">Docker</span>
-                    <span className="tag">PyTorch</span>
-                  </div>
-                </div>
-                <div className="skill-category">
-                  <h4 className="text-sm font-medium mb-2">Databases & APIs</h4>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="tag">PostgreSQL</span>
-                    <span className="tag">REST</span>
-                    <span className="tag">GraphQL</span>
-                    <span className="tag">OpenAPI</span>
-                    <span className="tag">OAuth</span>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -129,31 +159,18 @@ export default function HomePage() {
       <section id="experience">
         <h2 className="font-semibold">Experience</h2>
         <ul className="mt-6 space-y-4">
-          <li className="card">
-            <div className="flex justify-between items-start mb-2">
-              <div className="font-medium">Software Engineering Intern — Mylo</div>
-              <div className="text-sm text-muted">June 2025 – Aug 2025</div>
-            </div>
-            <div className="text-sm text-muted mb-3">Cairo, Egypt • Next.js · NestJS · AWS · PostgreSQL</div>
-            <ul className="text-sm text-muted space-y-2">
-              <li>• Reduced customer credit approval time by 90% by automating consumer onboarding processes with Next.js and Amazon S3</li>
-              <li>• Engineered scalable audit logging system capturing 1,000+ daily user actions with NestJS, PostgreSQL, and GraphQL APIs</li>
-              <li>• Implemented role-based authorization using TypeORM and OpenAPI REST APIs, improving security and operations</li>
-              <li>• Built modular React components with configurable layouts, reducing code duplication and enhancing scalability</li>
-            </ul>
-          </li>
-          <li className="card">
-            <div className="flex justify-between items-start mb-2">
-              <div className="font-medium">Research Assistant — Georgia Tech</div>
-              <div className="text-sm text-muted">Jan 2025 – Present</div>
-            </div>
-            <div className="text-sm text-muted mb-3">Atlanta, Georgia • PyTorch · CARLA · AI Research</div>
-            <ul className="text-sm text-muted space-y-2">
-              <li>• Building hybrid AI driving models analyzing autonomous vs. human driving behavior to improve vehicle safety</li>
-              <li>• Increased lane-change prediction accuracy by 37% through PyTorch neural network hyperparameter optimization</li>
-              <li>• Enhanced model reliability using Behavior Cloning and Deep Reinforcement Learning for real-world deployment</li>
-            </ul>
-          </li>
+          {experience.map((job) => (
+            <li key={job.company} className="card">
+              <div className="card-heading mb-2">
+                <h3 className="text-lg font-medium">{job.role} — {job.company}</h3>
+                <div className="text-sm text-muted card-date">{job.dates}</div>
+              </div>
+              <div className="text-sm text-muted mb-3">{job.context}</div>
+              <ul className="achievement-list text-sm text-muted space-y-2">
+                {job.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+              </ul>
+            </li>
+          ))}
         </ul>
       </section>
 
@@ -162,14 +179,39 @@ export default function HomePage() {
         <h2 className="font-semibold">Projects</h2>
         <div className="mt-6 grid grid-md-2">
           {projects.map((p) => (
-            <a key={p.title} href={p.href} className="card">
-              <div className="text-lg font-medium">{p.title}</div>
+            <article key={p.title} className="card">
+              <h3 className="text-lg font-medium">{p.title}</h3>
               <p className="mt-4 text-sm text-muted">{p.blurb}</p>
+              <p className="text-sm text-muted">{p.details}</p>
               <div className="mt-4 flex flex-wrap">
                 {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
               </div>
-            </a>
+            </article>
           ))}
+        </div>
+        <p className="mt-4 text-sm">
+          <a href="https://github.com/y2mm" target="_blank" rel="noopener noreferrer">Explore my work on GitHub →</a>
+        </p>
+      </section>
+
+      {/* EDUCATION */}
+      <section id="education">
+        <h2 className="font-semibold">Education</h2>
+        <div className="card mt-6">
+          <div className="card-heading mb-2">
+            <h3 className="text-lg font-medium">Georgia Institute of Technology</h3>
+            <div className="text-sm text-muted card-date">Graduating December 2026</div>
+          </div>
+          <p className="mb-2">Bachelor of Science in Computer Science</p>
+          <p className="text-sm text-muted">Information/Internetworks and Cybersecurity · Atlanta, GA</p>
+          <p className="text-sm text-muted">
+            <strong>Coursework:</strong> Data Structures &amp; Algorithms, Computer Networking, Information Security,
+            Cybersecurity Management, Databases, Computer Architecture, Systems &amp; Networks, Network Security,
+            and Applied Combinatorics.
+          </p>
+          <p className="text-sm text-muted">
+            <strong>Organizations:</strong> Wreck Racing, Arab Student Organization.
+          </p>
         </div>
       </section>
 
@@ -178,8 +220,8 @@ export default function HomePage() {
         <h2 className="font-semibold">Contact</h2>
         <div className="mt-6 space-y-4">
           <p className="text-muted">
-            Let&apos;s connect! I&apos;m always interested in discussing new opportunities, 
-            collaborating on projects, or chatting about technology and cybersecurity.
+            Let&apos;s connect! I&apos;m interested in software engineering opportunities and collaborating on
+            projects in agentic AI, full-stack development, and cybersecurity.
           </p>
           <div className="flex flex-wrap gap-4">
             <a 
